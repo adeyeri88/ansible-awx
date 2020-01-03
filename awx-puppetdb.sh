@@ -67,7 +67,7 @@ printf "  \"group\": {\n    \"hosts\": [\n" >> $TMPJSON
 
 for i in ${NODES[@]}; do
 
-  if [[ $n = $LASTNODE ]]; then
+  if [[ $i = $LASTNODE ]]; then
     printf "      \"${i}\"\n" >> $TMPJSON
   else
     printf "      \"${i}\",\n" >> $TMPJSON
